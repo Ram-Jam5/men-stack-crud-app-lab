@@ -10,13 +10,24 @@ mongoose.connection.on("connected", () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
 })
 const Soccer = require("./models/soccer")
+app.use(express.urlencoded({ extended: false }))
 
 app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
 
 app.get("/soccer/new", (req, res) => {
-    res.send("This route sends the user a form page!")
+    res.render("soccer/new.ejs")
+});
+
+app.post("/soccer", async (req, res) => {
+   if (req.body.wonTrophyThisSeason === "on") {
+    req.body.wonTrophyThisSeason = true;
+   } else {
+    req.body.wonTrophyThisSeason = false;
+   }
+   await Soccer.create(req.body);
+   res.redirect("soccer/new");
 });
 
 app.listen(3000, () => {
