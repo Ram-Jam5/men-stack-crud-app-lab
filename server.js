@@ -20,6 +20,11 @@ app.get("/soccer/new", (req, res) => {
     res.render("soccer/new.ejs")
 });
 
+app.get("/soccer", async (req, res) => {
+    const allSoccer = await Soccer.find();
+   res.render("soccer/index.ejs", { soccer: allSoccer });
+});
+
 app.post("/soccer", async (req, res) => {
    if (req.body.wonTrophyThisSeason === "on") {
     req.body.wonTrophyThisSeason = true;
@@ -27,7 +32,7 @@ app.post("/soccer", async (req, res) => {
     req.body.wonTrophyThisSeason = false;
    }
    await Soccer.create(req.body);
-   res.redirect("soccer/new");
+   res.redirect("soccer");
 });
 
 app.listen(3000, () => {

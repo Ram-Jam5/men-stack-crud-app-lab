@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soccer Teams Index</title>
+  </head>
+  <body>
+    <h1>All Teams</h1>
+    <ul>
+    <% soccer.forEach(soccer => { %>
+        <li><%= soccer.name %></li>
+    <% }) %>
+
+    </ul>
+  </body>
+</html>
