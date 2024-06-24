@@ -46,8 +46,9 @@ app.post("/soccer", async (req, res) => {
    res.redirect("soccer");
 });
 
-app.delete("/soccer/:soccerId", (req, res) => {
-    res.send("this is the delete route")
+app.delete("/soccer/:soccerId", async (req, res) => {
+    await Soccer.findByIdAndDelete(req.params.soccerId)
+    res.redirect("/soccer")
 })
 
 app.listen(3000, () => {
