@@ -35,6 +35,14 @@ app.get("/soccer/:soccerId", async (req, res) => {
     res.render("soccer/show.ejs", { soccer: foundSoccer })
 })
 
+app.get("/soccer/:soccerId/edit", async (req, res) => {
+    const foundSoccer = await Soccer.findById(req.params.soccerId)
+    res.render("soccer/edit.ejs", {
+        soccer: foundSoccer
+    })
+})
+
+
 
 app.post("/soccer", async (req, res) => {
    if (req.body.wonTrophyThisSeason === "on") {
@@ -46,9 +54,22 @@ app.post("/soccer", async (req, res) => {
    res.redirect("soccer");
 });
 
+
+
 app.delete("/soccer/:soccerId", async (req, res) => {
     await Soccer.findByIdAndDelete(req.params.soccerId)
     res.redirect("/soccer")
+})
+
+app.put("/soccer/:soccerId", async (req, res) => {
+    if (req.body.wonTrophyThisSeason === "on") {
+        req.body.wonTrophyThisSeason = true;
+    } else {
+        req.body.wonTrophyThisSeason = false;
+    }
+
+    await Soccer.findByIdAndUpdate(req.params.soccerId, req.body);
+    res.redirect(`/soccer/${req.params.soccerId}`)
 })
 
 app.listen(3000, () => {

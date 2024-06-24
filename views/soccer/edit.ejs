@@ -1,0 +1,15 @@
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= soccer.name %></h1>
+    <form action="/soccer/<%= soccer._id %>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= soccer.name %>" />
+  
+      <label for="wonTrophyThisSeason">Won a trophy this season?</label>
+      <input type="checkbox" name="wonTrophyThisSeason" id="wonTrophyThisSeason" <% if (soccer.wonTrophyThisSeason) { %>checked<% } %> />
+      
+      <button type="submit">Update Team</button>
+    </form>
+    <a href="/soccer">Back to Teams</a>
+  </body>
+  
