@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+
+body {
+    background: #fff8ed;
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+  }
+  
+  h1 {
+    color: #ff3300;
+    font-size: 3.6em;
+  }
+  
+  footer {
+    font-size: 0.7em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .soccer-pic {
+    height: 30%;
+  }
+  
+.soccer-index-link {
+    text-decoration: none;
+}
+
+.index-link-text {
+    background-color: #ff3300;
+    color: white;
+    font-size: 1.4 em;
+    width: 10 em;
+    padding: 5px 15px;
+    margin: 15px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 5px #001a00;
+}
+
+.index-link-text:hover {
+    background-color: #001a00;
+    box-shadow: 0 5px #3f6a51;
+}
+
+.index-link-text:active {
+    background-color: #3f6a51;
+    box-shadow: 0 2.5px #001a00;
+}
+
+form {
+    font-family: "DM Sans", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #2d4d3a;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 5px 6px #001a00;
+    margin: 20px 10px;
+}
+
+.checkbox-div {
+    flex-direction: row;
+}
+
+label, 
+input {
+    margin: 10px 2px 0 2px;
+}
+
+button {
+    align-self: center;
+    margin: 10px 4px 4px 4px;
+    background-color: #ff3300;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    width: 15em;
+}
+
+button:hover {
+    background-color: #769642;
+}
+  
+button:active {
+    background-color: #2d4d3a;
+}
+
+.soccer-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    padding: 20px 0;
+}
+
+.delete-form {
+    padding: 0;
+    box-shadow: 0 0;
+    background-color: transparent;
+    height: 50px;
+    margin: 0 20px 0 0;
+    min-height: 100%;
+}
+
+.delete-button {
+    background-color: #003300;
+    text-transform: uppercase;
+    padding: 40px 15px;
+    width: 70%;
+    font-size: 1.3 em;
+    margin: 0;
+    min-height: 100%;
+}
+.edit-link {
+    text-decoration: none;
+}
+
+.edit-text {
+    background-color: #3f6a51;
+    text-transform: uppercase;
+    padding: 40px 15 px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 70%;
+    height: 80px;
+}
+
+.delete-button:hover {
+    background-color:  rgb(217, 108, 78);
+}
+  
+.delete-button:active {
+    background-color: #ff3300;
+}
+  
+.edit-text:hover {
+    background-color: #769642;
+}
+  
+.edit-text:active {
+    background-color: #2d4d3a;
+    background-color: #ff3300;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+.soccer-cards {
+    display: flex;
+    flex-direction: column;
+    text-decoration: bold;
+    color: black;
+    width: 40px;
+    height: 70px;
+    background-color: white;
+    margin: 10px 15px;
+    padding: 30px 50px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #ff3300;
+}
+
+.soccer-cards:hover {
+    border: 4px solid #0066ff;
+}
+
+.soccer-cards:active {
+    background-color: #a4cf5f67;
+    border: 2.5px solid #ffbd59;
+    color: gray;
+}
+
+.index-header-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+}
+
+.add-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    text-decoration: none;
+    width: 6em;
+    text-transform: uppercase;
+    background-color: #ff3300;
+    border-radius: 30px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+img {
+    height: 100%;
+    margin: 20px 0 0 0;
+}

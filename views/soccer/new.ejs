@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add a Soccer Team</title>
   </head>
   <body>
@@ -10,11 +11,14 @@
     <form action = "/soccer" method="POST">
         <label for ="name">Name:</label>
         <input type="text" name="name" id="name" />
-        <label for="wonTrophyThisSeason">Won a trophy this season?</label>
-        <input type="checkbox" name="wonTrophyThisSeason" id="wonTrophyThisSeason" />
+        <div class="checkbox-div">
+          <label for="wonTrophyThisSeason">Won a trophy this season?</label>
+          <input type="checkbox" name="wonTrophyThisSeason" id="wonTrophyThisSeason" />
+        </div>
         <button type="submit">Add team</button>
-        <a href="/soccer/">Back to Teams</a>
-
+        <a class="soccer-index-link" href="/soccer">
+          <div class="index-link-text">Browse Teams</div>
+          </a>
     </form>
   </body>
 </html>

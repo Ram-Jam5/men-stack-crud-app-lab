@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Soccer Teams Index</title>
   </head>
   <body>
-    <h1>All Teams</h1>
+    <div class="index-header-div">
+      <h1>All Teams</h1>
+      <a class="add-team" href="/soccer/new">Add New Team</a>
+    </div>
     <ul>
     <% soccer.forEach(soccer => { %>
-        <li><a href="/soccer/<%= soccer._id %>"><%= soccer.name %></a></li>
+        <li><a class="soccer-cards" href="/soccer/<%= soccer._id %>"><%= soccer.name %></a></li>
     <% }) %>
 
     </ul>
-    <a href="/soccer/new">Add New Team</a>
+    
   </body>
 </html>

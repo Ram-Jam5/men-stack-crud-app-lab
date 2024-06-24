@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title><%= soccer.name %></title>
   </head>
   <body>
+    <div class="soccer-details">
     <h1><%= soccer.name %></h1>
     <% if (soccer.wonTrophyThisSeason) { %>
-        <p>This team won a trophy this season!</p>
+        <p>This team won a trophy this season!  &#127942;</p>
     <% } else { %>
-        <p>This team didn't win a trophy this season!</p>
+        <p>This team didn't win a trophy this season! &#128078;</p>
         <% } %>
-        <form action="/soccer/<%= soccer._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete <%= soccer.name %> </button>
+    </div>
+    <div class="soccer-actions">
+        <form 
+          class="delete-form"
+          action="/soccer/<%= soccer._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button class="delete-button" type="submit">
+            Delete <%= soccer.name %> 
+          </button>
         </form>
-        <a href="/soccer/<%= soccer._id %>/edit">Edit <%= soccer.name %></a>
-        <a href="/Soccer/">Back to Teams</a>
+        <a class="edit-link" href="/soccer/<%= soccer._id %>/edit">
+          <div class="edit-text">Edit <%= soccer.name %></div>
+        </a>
+        </div>
+        <a class="soccer-index-link" href="/soccer">
+          <div class="index-link-text">Browse Teams</div>
+          </a>
   </body>
 </html>
 
