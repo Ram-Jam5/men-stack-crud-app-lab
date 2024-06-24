@@ -25,6 +25,11 @@ app.get("/soccer", async (req, res) => {
    res.render("soccer/index.ejs", { soccer: allSoccer });
 });
 
+app.get("/soccer/:soccerId", async (req, res) => {
+    const foundSoccer = await Soccer.findById(req.params.soccerId)
+    res.render("soccer/show.ejs", { soccer: foundSoccer })
+})
+
 app.post("/soccer", async (req, res) => {
    if (req.body.wonTrophyThisSeason === "on") {
     req.body.wonTrophyThisSeason = true;
