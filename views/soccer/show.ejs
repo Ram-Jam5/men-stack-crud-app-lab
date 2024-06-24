@@ -12,6 +12,10 @@
     <% } else { %>
         <p>This team didn't win a trophy this season!</p>
         <% } %>
+        <form action="/soccer/<%= soccer._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete <%= soccer.name %> </button>
+        </form>
+
         <a href="/Soccer/">Back to Teams</a>
   </body>
 </html>
