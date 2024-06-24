@@ -9,9 +9,10 @@
     <h1>All Teams</h1>
     <ul>
     <% soccer.forEach(soccer => { %>
-        <li><%= soccer.name %></li>
+        <li><a href="#"><%= soccer.name %></a></li>
     <% }) %>
 
     </ul>
+    <a href="/soccer/new">Add New Team</a>
   </body>
 </html>
