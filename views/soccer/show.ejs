@@ -15,7 +15,7 @@
         <form action="/soccer/<%= soccer._id %>?_method=DELETE" method="POST">
             <button type="submit">Delete <%= soccer.name %> </button>
         </form>
-
+        <a href="/soccer/<%= soccer._id %>/edit">Edit <%= soccer.name %></a>
         <a href="/Soccer/">Back to Teams</a>
   </body>
 </html>
