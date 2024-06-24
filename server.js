@@ -35,6 +35,7 @@ app.get("/soccer/:soccerId", async (req, res) => {
     res.render("soccer/show.ejs", { soccer: foundSoccer })
 })
 
+
 app.post("/soccer", async (req, res) => {
    if (req.body.wonTrophyThisSeason === "on") {
     req.body.wonTrophyThisSeason = true;
@@ -44,6 +45,10 @@ app.post("/soccer", async (req, res) => {
    await Soccer.create(req.body);
    res.redirect("soccer");
 });
+
+app.delete("/soccer/:soccerId", (req, res) => {
+    res.send("this is the delete route")
+})
 
 app.listen(3000, () => {
     console.log("Listening on Port 3000");
